@@ -31,6 +31,7 @@ export type LLMModel = {
 };
 
 export const ttsVoices: Voice[] = [
+  { label: "Japanese", id: "2b568345-1d48-4047-b25f-7baccf842eb0" },
   { label: "Default", id: "79a125e8-cd45-4c13-8a67-188112f4dd22" },
   { label: "California Girl", id: "b7d50908-b17c-442d-ad8d-810c63997ed9" },
   { label: "Friendly Reading Man", id: "69267136-1bdc-412f-ad78-0caad210fb40" },
@@ -53,8 +54,8 @@ export const languages: Language[] = [
 ];
 
 export const llmModels: LLMModel[] = [
-  { label: "LLama3 70b", id: "llama-3.1-70b-versatile" },
-  { label: "Llama3 8b", id: "llama-3.1-8b-instant" },
+  { label: "Llama3.1 8b", id: "llama-3.1-8b-instant" },
+  { label: "LLama3.1 70b", id: "llama-3.1-70b-versatile" },
 ];
 
 export const defaultConfig = {
@@ -64,7 +65,7 @@ export const defaultConfig = {
       {
         role: "system",
         content:
-          "You are Chatbot, a friendly, helpful robot. Your output will be converted to audio so don't include special characters other than '!' or '?' in your answers. Respond to what the user said in a creative and helpful way, but keep your responses brief. Start by saying hello.",
+          "Respond in Japanese. You are Chatbot, a friendly, helpful robot. Your output will be converted to audio so don't include special characters other than '!' or '?' in your answers. Respond to what the user said in a creative and helpful way, but keep your responses brief. Start by saying hello.",
         //composeSystemPrompt(defaultLanguage),
       },
     ],
